@@ -26,7 +26,7 @@ Submitted by: **Hardik Shukla**
 
 
 <img src="Walkthrough-Portrait.gif" width=250><br>
-<img src="Walkthrough-Landscape.gif" width=250><br>
+<img src="Walkthrough-Landscape.gif" width=600><br>
 
 ### Notes
 Describe any challenges encountered while building the app.
