@@ -20,7 +20,7 @@
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="271dp"
-        android:layout_height="47dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="1dp"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/tvOverview"
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
         android:layout_marginStart="5dp"
