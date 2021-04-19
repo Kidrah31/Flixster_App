@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity"
+    android:background="@color/grey_tint_light"
+    android:backgroundTint="@color/white"
     android:orientation="vertical"
-    >
+    tools:context=".DetailActivity">
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/player"
         android:layout_width="match_parent"
-        android:layout_height="280dp" />
+        android:layout_height="280dp"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        android:backgroundTint="@color/black" />
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#A47DE8"
-        android:textSize="30sp"
-        tools:text="Wonder Woman" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/t_layout"
+        android:backgroundTint="@color/grey_tint_dark"
+        android:fontFamily="@font/bebasneue"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:textColor="#C1000000"
+        android:textSize="32sp"
+        tools:text="WONDER WOMAN" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         style="@style/Widget.AppCompat.RatingBar.Indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/t_layout"
+        android:backgroundTint="@color/grey_tint_light"
         android:isIndicator="true"
         android:numStars="10"
         android:rating="8.5" />
@@ -34,17 +53,34 @@
         android:id="@+id/tvOverview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#C2A7F1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/t_layout"
+        android:backgroundTint="@color/grey_tint_light"
+        android:fontFamily="@font/allerta"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+        android:textColor="@color/primaryLightColor"
         tools:text="Movie Overview Text" />
 
     <TextView
         android:id="@+id/tvReleaseDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/t_layout"
+        android:backgroundTint="@color/grey_tint_light"
+        android:fontFamily="@font/allerta"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
         android:textAlignment="viewStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#C2A7F1"
+        android:textColor="@color/primaryLightColor"
         android:textSize="18sp"
         android:textStyle="bold"
         android:typeface="serif"
@@ -54,8 +90,17 @@
         android:id="@+id/tvAdult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/t_layout"
+        android:backgroundTint="@color/grey_tint_light"
+        android:fontFamily="@font/allerta"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#F49393"
+        android:textColor="@color/secondaryLightColor"
         android:textStyle="bold"
         tools:text="Only for Adults" />
 

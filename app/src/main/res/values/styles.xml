@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TitleBarTextAppearance" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/bebasneue</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/secondaryColor</item>
+    </style>
+</resources>

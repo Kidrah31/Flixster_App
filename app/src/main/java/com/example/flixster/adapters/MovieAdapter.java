@@ -3,6 +3,7 @@ package com.example.flixster.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.MultiTransformation;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.example.flixster.DetailActivity;
 import com.example.flixster.R;
 
@@ -23,6 +26,9 @@ import java.util.List;
 import com.example.flixster.models.Movie;
 
 import org.parceler.Parcels;
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
     Context context;
@@ -85,7 +91,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 // else imageUrl=poster image
                 imageUrl = movie.getPosterPath();
             }
-            Glide.with(context).load(imageUrl).into(ivPoster);
+            Glide.with(context)
+                    .load(imageUrl)
+                    //.transform(new MultiTransformation<Bitmap>(new BlurTransformation(15),new RoundedCornersTransformation(40, 10)))
+                    .transform(new RoundedCornersTransformation(35, 10))
+                    .into(ivPoster);
+
             // Register click listener on the whole row
 
             container.setOnClickListener(new View.OnClickListener() {
