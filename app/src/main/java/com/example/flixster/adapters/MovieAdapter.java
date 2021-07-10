@@ -93,6 +93,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             }
             Glide.with(context)
                     .load(imageUrl)
+                    .placeholder(R.drawable.place_holder)
                     //.transform(new MultiTransformation<Bitmap>(new BlurTransformation(15),new RoundedCornersTransformation(40, 10)))
                     .transform(new RoundedCornersTransformation(35, 10))
                     .into(ivPoster);
