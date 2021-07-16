@@ -25,7 +25,8 @@ import okhttp3.Headers;
 public class DetailActivity extends YouTubeBaseActivity {
     private static final String YOUTUBE_API_KEY="AIzaSyAFBnqoW7lXQg4fmnOWHYdV_Xed3EIieDs";
     public static final String VIDEOS_URL="https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
-
+    String youtubeKey;
+    Float rating;
     TextView tvTitle;
     TextView tvOverview;
     RatingBar ratingBar;
@@ -48,7 +49,8 @@ public class DetailActivity extends YouTubeBaseActivity {
         Movie movie= Parcels.unwrap(getIntent().getParcelableExtra("movie"));
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
-        ratingBar.setRating((float)movie.getRating());
+        rating=(float)movie.getRating();
+        ratingBar.setRating(rating);
         tvReleaseDate.setText(String.format("Release Date: %s",movie.getReleaseDate()));
         if(movie.isAdult()) {
             tvAdult.setText("Recommended for Adults Only");
@@ -66,7 +68,7 @@ public class DetailActivity extends YouTubeBaseActivity {
                    {
                       return;
                    }
-                    String youtubeKey = results.getJSONObject(0).getString("key");
+                     youtubeKey = results.getJSONObject(0).getString("key");
                    Log.d("DetailActivity",youtubeKey);
                    initializeYoutube(youtubeKey);
                 } catch (JSONException e) {
@@ -89,7 +91,10 @@ public class DetailActivity extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d("DetailActivity","OnInitializationSuccess");
                 // do any work here to cue video, play video, etc.
+
                 youTubePlayer.cueVideo(youtubeKey);
+
+
             }
 
             @Override

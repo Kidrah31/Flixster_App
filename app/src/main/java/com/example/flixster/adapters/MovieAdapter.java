@@ -106,6 +106,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                     // Navigate to a new activity on a tap
                     //Toast.makeText(context,movie.getTitle(),Toast.LENGTH_SHORT).show();
                     Intent i= new Intent(context, DetailActivity.class);
+
                     i.putExtra("title",movie.getTitle());
                     i.putExtra("movie", Parcels.wrap(movie));
                     context.startActivity(i);
